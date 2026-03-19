@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Budget Boss</title>
+        <meta name="description" content="Budget Boss">
+        <link rel="stylesheet" href="design.css">
+    </head>
+
+    <body>
+            
+        <header>
+            <span class="menu-toggle" onclick="toggleMenu()">☰</span> <!-- ✅ Move here -->
+            <h1>💼 Budget Boss</h1>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="Home.html" class="active">Home</a></li>
+                    <li><a href="Dashboard.html">Dashboard</a></li>
+                    <li><a href="Transactions.html">Transactions</a></li>
+                    <li><a href="Reports.html">Reports</a></li>
+                    <li><a href="Settings.html">Settings</a></li>
+                </ul>
+            </nav>
+        </header>
+            <section class="card">
+                <h2>Welcome to Budget Boss</h2>
+                <p>
+                    Budget Boss helps you track income, monitor expenses, and stay in control of your finances with simple and powerful budgeting tools.
+                </p>
+            </section>
+            <main>
+                <section id="balance-display" class="card">
+                    <h2>Current Balance</h2>
+                    <p><span id="balance">R0.00</span></p>
+                </section>
+
+                <br>
+
+                <section class="card">
+                    <h2>Add Income</h2>
+                    <label for="income-description">Description:</label>
+                    <input type="text" id="income-description" placeholder="Description">
+                    <label for="income-amount">Amount:</label>
+                    <input type="number" id="income-amount" placeholder="Amount">
+                    <br>
+                    <button onclick="addIncome()">Add Income</button>
+                </section>
+
+                <br>
+
+                <section class="card">
+                    <h2>Add Expense</h2>
+                    <label for="expense-description">Description:</label>
+                    <input type="text" id="expense-description" placeholder="Description">
+                    <label for="expense-amount">Amount:</label>
+                    <input type="number" id="expense-amount" placeholder="Amount">
+                    <br>
+                    <label for="expense-category">Category:</label>
+                    <select id="expense-category">
+                        <option value="food">Food</option>
+                        <option value="transport">Transport</option>
+                        <option value="entertainment">Entertainment</option>
+                        <option value="utilities">Utilities</option>
+                    </select>
+                    <br>
+                    <button onclick="addExpense()">Add Expense</button>
+                </section>
+
+                <br>
+
+                <section class="card">
+                    <h2>Transactions</h2>
+                    <table>
+                        <thead>
+                        <tr><th>Date</th><th>Description</th><th>Category</th><th>Amount</th></tr>
+                        </thead>
+                        <tbody id="transactionList"></tbody>
+                    </table>
+                </section>
+
+                <br>
+
+                <section class="card">
+                    <h2>Expense Breakdown</h2>
+                    <canvas id="expenseChart"></canvas>
+                </section>
+
+
+         </main>
+
+
+         <script src="Script.js"></script>
+
+        <script>
+                // Apply saved theme on page load
+            document.addEventListener("DOMContentLoaded", () => {
+                const savedTheme = localStorage.getItem("theme") || "light";
+                if (savedTheme === "dark") {
+                    document.body.classList.add("dark-mode");
+                }
+            });
+        </script>
+
+
+    </body>
+
+</html>

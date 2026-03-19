@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Budget Boss Reports</title>
+
+        <link rel="stylesheet" href="design.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    </head>
+
+    <body>
+
+        <header>
+    <span class="menu-toggle" onclick="toggleMenu()">☰</span> <!-- Hamburger -->
+    <h1>💼 Budget Boss</h1>
+    <nav>
+        <ul id="nav-menu">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Dashboard.html">Dashboard</a></li>
+            <li><a href="Transactions.html">Transactions</a></li>
+            <li><a href="Reports.html" class="active">Reports</a></li>
+            <li><a href="Settings.html">Settings</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+        <main class="dashboard">
+
+            <!-- Summary -->
+
+            <section class="card">
+
+                <h2>Financial Summary</h2>
+
+                <p>Total Income: <span id="totalIncome">R0.00</span></p>
+
+                <p>Total Expenses: <span id="totalExpenses">R0.00</span></p>
+
+                <p>Savings: <span id="savings">R0.00</span></p>
+
+            </section>
+
+
+
+            <!-- Monthly Chart -->
+
+            <section class="card">
+
+                <h2>Monthly Spending</h2>
+
+                <canvas id="monthlyChart"></canvas>
+
+            </section>
+
+
+
+            <!-- Category Chart -->
+
+            <section class="card">
+
+                <h2>Expenses by Category</h2>
+
+                <canvas id="categoryChart"></canvas>
+
+            </section>
+
+            <div class="filters">
+                <button onclick="exportCSV()">Download CSV</button>
+            </div>
+
+        </main>
+
+         <script src="Script.js"></script>
+
+          <script>
+                // Apply saved theme on page load
+            document.addEventListener("DOMContentLoaded", () => {
+                const savedTheme = localStorage.getItem("theme") || "light";
+                if (savedTheme === "dark") {
+                    document.body.classList.add("dark-mode");
+                }
+            });
+        </script>
+
+    </body>
+
+</html>
