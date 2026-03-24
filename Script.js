@@ -65,6 +65,7 @@ function initHome() {
   }
 
   window.addIncome = function() {
+    console.log("income button clicked");
     let description = document.getElementById("income-description").value;
     let amount = parseFloat(document.getElementById("income-amount").value);
     if (description && amount > 0) {
