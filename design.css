@@ -316,3 +316,31 @@ body.dark-mode table th {
     grid-template-columns: 1fr;
   }
 }
+
+/* Show hamburger on all screen sizes */
+.menu-toggle {
+  display: block;
+}
+
+/* Hide nav by default */
+nav ul {
+  display: none;
+  flex-direction: column;
+  background: var(--primary);
+  position: absolute;
+  top: 100%;   /* drop below header */
+  left: 0;
+  width: 200px;
+  padding: 1rem;
+  z-index: 1000;
+  border-radius: 0 0 8px 8px;
+}
+
+/* Show nav when toggled */
+nav ul.show {
+  display: flex;
+}
+
+nav a {
+  padding: 10px 0;
+}
