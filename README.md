@@ -6,7 +6,7 @@ A simple and intuitive budgeting web application that helps users track income, 
 
 ## 🌐 Live Demo
 
-👉 (Add your link here after deploying with GitHub Pages)
+👉 https://de-bongz.github.io/Budget-Boss-app/
 
 ---
 
@@ -45,12 +45,6 @@ cd Budget-Boss-app
 ```
 
 3. Open `index.html` in your browser
-
----
-
-## 📷 Screenshots
-
-(Add screenshots of your app here — very important for recruiters)
 
 ---
 
