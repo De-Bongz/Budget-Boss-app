@@ -131,18 +131,19 @@ nav a.active {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  /* Default size */
-  min-width: 500px;     /* ensures a consistent base width */
-  min-height: 250px;    /* ensures a consistent base height */
 
-  /* Flexible sizing */
-  width: auto;          /* adjusts to content */
-  height: auto;         /* adjusts to content */
-  max-width: 100%;      /* prevents overflow on smaller screens */
+  /* Base sizing */
+  min-width: 300px;     /* smaller minimum for flexibility */
+  min-height: 150px;    /* smaller minimum for flexibility */
+  max-width: 600px;     /* keeps cards from stretching too wide */
 
-  display: inline-block;
-  flex: 0 0 auto;       /* don’t force equal width */
+  /* Responsive behavior */
+  width: 100%;          /* fills available space but respects max-width */
+  height: auto;         /* grows with content */
 
+  /* Layout */
+  display: inline-block; /* works if cards are side by side */
+  vertical-align: top;   /* aligns cards neatly */
 }
 
 .card h2 {
