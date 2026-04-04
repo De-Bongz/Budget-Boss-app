@@ -1,56 +1,62 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <title>Budget Boss - Transactions</title>
-  <link rel="stylesheet" href="design.css">
-</head>
-<body>
-  <!-- Navigation -->
-  <header>
-  <span class="menu-toggle" onclick="toggleMenu()">☰</span> <!-- Hamburger -->
-  <h1>💼 Budget Boss</h1>
-  <nav>
-    <ul id="nav-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="Dashboard.html">Dashboard</a></li>
-      <li><a href="Transactions.html" class="active">Transactions</a></li>
-      <li><a href="Reports.html">Reports</a></li>
-      <li><a href="Settings.html">Settings</a></li>
-    </ul>
-  </nav>
-</header>
-
-  <main>
-        <section class="card">
-        <h2>Transactions</h2>
-                    <table>
-                        <thead>
-                        <tr><th>Date</th><th>Description</th><th>Category</th><th>Amount</th></tr>
-                        </thead>
-                        <tbody id="transactionList"></tbody>
-                    </table>
-        </section>
+  <head>
+    <meta charset="UTF-8">
+    <title>Budget Boss - Transactions</title>
+    <link rel="stylesheet" href="design.css">
 
 
-        <div class="filters">
-          <button onclick="filterTransactions('income')">Show Income</button>
-          <button onclick="filterTransactions('expense')">Show Expenses</button>
-          <button onclick="initTransactions()">Show All</button>
-        </div>
+    <link rel="icon" type="image/png" href="Images/Budget Boss logo.png">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header>
+      <span class="menu-toggle" onclick="toggleMenu()">☰</span> <!-- Hamburger for mobile -->
+      <h1 >
+          <img src ="Images/Budget Boss logo.png" alt="Budget Boss Logo">
+          Budget Boss
+      </h1>
+      <nav>
+        <ul id="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Dashboard.html">Dashboard</a></li>
+          <li><a href="Transactions.html" class="active">Transactions</a></li>
+          <li><a href="Reports.html">Reports</a></li>
+          <li><a href="Settings.html">Settings</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    </main>
+    <main>
+          <section class="card">
+          <h2>Transactions</h2>
+                      <table>
+                          <thead>
+                          <tr><th>Date</th><th>Description</th><th>Category</th><th>Amount</th></tr>
+                          </thead>
+                          <tbody id="transactionList"></tbody>
+                      </table>
+          </section>
 
-   <script src="Script.js"></script>
 
-    <script>
-                // Apply saved theme on page load
-            document.addEventListener("DOMContentLoaded", () => {
-                const savedTheme = localStorage.getItem("theme") || "light";
-                if (savedTheme === "dark") {
-                    document.body.classList.add("dark-mode");
-                }
-            });
-        </script>
-</body>
+          <div class="filters">
+            <button onclick="filterTransactions('income')">Show Income</button>
+            <button onclick="filterTransactions('expense')">Show Expenses</button>
+            <button onclick="initTransactions()">Show All</button>
+          </div>
+
+      </main>
+
+    <script src="Script.js"></script>
+
+      <script>
+                  // Apply saved theme on page load
+              document.addEventListener("DOMContentLoaded", () => {
+                  const savedTheme = localStorage.getItem("theme") || "light";
+                  if (savedTheme === "dark") {
+                      document.body.classList.add("dark-mode");
+                  }
+              });
+          </script>
+  </body>
 </html>

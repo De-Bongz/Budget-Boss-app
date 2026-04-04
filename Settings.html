@@ -1,59 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Budget Boss - Settings</title>
-  <link rel="stylesheet" href="design.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Boss - Settings</title>
+    <link rel="stylesheet" href="design.css">
 
-  <header>
-    <span class="menu-toggle" onclick="toggleMenu()">☰</span> <!-- Hamburger for mobile -->
-    <h1>💼 Budget Boss</h1>
-    <nav>
-      <ul id="nav-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="Dashboard.html">Dashboard</a></li>
-        <li><a href="Transactions.html">Transactions</a></li>
-        <li><a href="Reports.html">Reports</a></li>
-        <li><a href="Settings.html" class="active">Settings</a></li>
-      </ul>
-    </nav>
-  </header>
+    <link rel="icon" type="image/png" href="Images/Budget Boss logo.png">
+  </head>
+  <body>
 
-  <main>
-    <section class="card">
-      <h2>Settings</h2>
+    <header>
+        <span class="menu-toggle" onclick="toggleMenu()">☰</span> <!-- Hamburger for mobile -->
+        <h1 >
+            <img src ="Images/Budget Boss logo.png" alt="Budget Boss Logo">
+            Budget Boss
+        </h1>
+        <nav>
+          <ul id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Dashboard.html">Dashboard</a></li>
+            <li><a href="Transactions.html">Transactions</a></li>
+            <li><a href="Reports.html">Reports</a></li>
+            <li><a href="Settings.html" class="active">Settings</a></li>
+          </ul>
+        </nav>
+      </header>
 
-      <label for="currency">Currency:</label>
-      <select id="currency">
-        <option value="R">Rand (R)</option>
-        <option value="$">Dollar ($)</option>
-        <option value="€">Euro (€)</option>
-      </select>
+    <main>
+      <section class="card">
+        <h2>Settings</h2>
 
-      <label for="theme">Theme:</label>
-      <select id="theme">
-        <option value="light">Light</option>
-        <option value="dark">Dark</option>
-      </select>
+        <label for="currency">Currency:</label>
+        <select id="currency">
+          <option value="R">Rand (R)</option>
+          <option value="$">Dollar ($)</option>
+          <option value="€">Euro (€)</option>
+        </select>
 
-      <button onclick="saveSettings()">Save Settings</button>
+        <label for="theme">Theme:</label>
+        <select id="theme">
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
 
-      <br><br>
+        <button onclick="saveSettings()">Save Settings</button>
 
-      <button onclick="toggleTheme()">🌙 Toggle Dark Mode</button>
-    </section>
+        <br><br>
 
-    <section class="card">
-      <h2>Budget Goal</h2>
-      <label for="budgetGoal">Monthly Budget Goal:</label>
-      <input type="number" id="budgetGoal" placeholder="Enter amount">
-      <button onclick="saveBudgetGoal()">Save Goal</button>
-    </section>
-  </main>
+        <button onclick="toggleTheme()">🌙 Toggle Dark Mode</button>
+      </section>
 
-  <script src="Script.js"></script>
-</body>
+      <section class="card">
+        <h2>Budget Goal</h2>
+        <label for="budgetGoal">Monthly Budget Goal:</label>
+        <input type="number" id="budgetGoal" placeholder="Enter amount">
+        <button onclick="saveBudgetGoal()">Save Goal</button>
+      </section>
+    </main>
+
+    <script src="Script.js"></script>
+  </body>
 </html>
